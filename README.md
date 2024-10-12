@@ -15,3 +15,9 @@ The following modes are available:
 
 When using linear interpolation of the antiderivative, this results in a bit crushing effect which is very noticeable at low gain.
 This disappears for cubic spline interpolation.
+
+## Roadmap
+
+* Implement oversampling
+* Other waveshaping types
+* Better DC-Offset Filter
