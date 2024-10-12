@@ -93,6 +93,7 @@ void ADAAAudioProcessor::changeProgramName(int index, const juce::String &newNam
 void ADAAAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock) {
     // Use this method as the place to do any pre-playback
     // initialisation that you need..
+    HighPass::init(getSampleRate());
 }
 
 void ADAAAudioProcessor::releaseResources() {
@@ -190,6 +191,7 @@ void ADAAAudioProcessor::processDriveBlock(juce::AudioBuffer<float> &buffer, dou
 
     buffer.applyGain(1 / (*driveParameter * SCALE));
     Utility::add(&buffer, -TanH::f(bias * (*driveParameter) * SCALE) / (*driveParameter * SCALE));
+    HighPass::processBlock(buffer);
 }
 
 //==============================================================================

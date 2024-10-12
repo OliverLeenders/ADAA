@@ -10,6 +10,7 @@
 #include "Compute.h"
 #include "FirstOrderADAA.h"
 #include "FirstOrderTransparentADAA.h"
+#include "HighPass.h"
 #include "Interpolator.h"
 #include "TanHLerp.h"
 #include "TanHSpline.h"
