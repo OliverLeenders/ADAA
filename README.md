@@ -4,7 +4,7 @@ This repo contains source code of a $\tanh$ distortion plugin which is antialias
 
 ## Transparent ADAA (M. Vicanek)
 
-Next to the original ADAA method, I implemented [Vicanek's version](https://vicanek.de/articles/AADistortion.pdf) which does not have an impulse response with a 0dB pole at nyquist.
+Next to the [original ADAA method](https://dafx16.vutbr.cz/dafxpapers/20-DAFx-16_paper_41-PN.pdf), I implemented [Vicanek's version](https://vicanek.de/articles/AADistortion.pdf) which does not have an impulse response with a 0dB pole at nyquist.
 
 ## Interpolation
 
