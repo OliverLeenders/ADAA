@@ -11,7 +11,9 @@ $$y[x] = \frac{F(x) - F(x_{-1})}{x - x_{-1}}$$
 where $x$ is the current sample, $x_{-1}$ is the previous sample and $F$ is the antiderivative of $f$.
 
 It is easy to see how this definition relates to the derivative:
+
 $$\frac{\partial F}{\partial x} = \lim_{h \rightarrow 0}\frac{F(x) - F(x + h)}{h}$$
+
 Note that the following holds:
 
 $$\lim_{h \rightarrow 0}\frac{F(x) - F(x + h)}{h} = \lim_{h \rightarrow 0}\frac{F(x) - F(x - h)}{h}$$
