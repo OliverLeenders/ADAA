@@ -5,18 +5,23 @@ This repo contains source code of a $\tanh$ distortion plugin which is antialias
 ## Math
 ### Quick Derivation
 With ADAA the waveshaping function $y[x] = f(x)$ is replaced with
+
 $$y[x] = \frac{F(x) - F(x_{-1})}{x - x_{-1}}$$
+
 where $x$ is the current sample, $x_{-1}$ is the previous sample and $F$ is the antiderivative of $f$.
 
 It is easy to see how this definition relates to the derivative:
 $$\frac{\partial F}{\partial x} = \lim_{h \rightarrow 0}\frac{F(x) - F(x + h)}{h}$$
 Note that the following holds:
+
 $$\lim_{h \rightarrow 0}\frac{F(x) - F(x + h)}{h} = \lim_{h \rightarrow 0}\frac{F(x) - F(x - h)}{h}$$
 
 Now let $h := x-x_{-1}$. Then we get $x_{-1} = x - h$ and thus:
+
 $$
 \lim_{x-x_{-1} \rightarrow 0} \frac{F(x) - F(x_1)}{x - x_{-1}}
 $$
+
 Leaving out the limit directly gives us the formula for $y[x]$.
 
 ### Ill-Conditioning
