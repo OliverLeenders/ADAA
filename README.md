@@ -31,7 +31,7 @@ Leaving out the limit directly gives us the formula for $y[x]$.
 When $x - x_{-1}$ becomes very small (i.e. approaches the numerical null-space) the above formula becomes ill-conditioned. The formula needs to take care of that:
 
 $$y[x] = \begin{cases}\frac{F(x) - F(x_1)}{x - x_{-1}} & \text{if } x > \varepsilon\\
-\frac{x + x_{-1}}{2} &\text{otherwise}
+\frac{f(x) + f(x_{-1})}{2} &\text{otherwise}
 \end{cases}$$
 
 ## Transparent ADAA (M. Vicanek)
